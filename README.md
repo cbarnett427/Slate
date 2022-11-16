@@ -1,6 +1,6 @@
 <div align="center">
 <h1>SLATE Website Template</h1>
-<i>A clean slate, this is a one-page website template with responsive mobile navigation.</i>
+<i>A clean slate, a one-page website template with responsive mobile navigation.</i>
 <br>
 <br>
 <a href="https://cbarnett427.github.io/slate/"><b>Live Demo</b></a>
