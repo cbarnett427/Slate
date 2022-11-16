@@ -1,0 +1,438 @@
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Figtree:400,500,600,700,800,900');
+
+/* --- Variables --- */
+:root {
+  --accent-color: #5d78ff;
+  --text-color: #3F3F3F;
+  --subtext-color: #6a6a6a;
+  --nav-color: #f6f6f8;
+  --body-color: #f6f6f8;
+  --alt-body-color: #e3e3e3;
+}
+
+/* --- Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* --- Main Styling ---*/
+body {
+  font-family: 'Figtree', 'Montserrat', Calibri, sans-serif;
+  line-height: 1.4;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .30s ease; /* For dark mode animation */
+}
+
+/* --- Common Styles ---*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+}
+
+p {
+	font-size: 16px;
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  display: inline;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 1.25rem;
+}
+
+/* --- Dark Theme Variables ---*/
+body.dark-theme {
+  --accent-color: #5d78ff;
+  --text-color: #e3e3e3;
+  --subtext-color: #e3e3e3;
+  --nav-color: #212121;
+  --body-color: #212121;
+  --alt-body-color: #303030;
+}
+
+
+/* ========== Utilities ========== */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 72rem;
+}
+
+.nav-wrapper {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bg-gray {
+  background-color: var(--alt-body-color);
+  transition: .30s ease; /* For dark mode animation */
+}
+
+.reveal {
+	opacity: 0;
+	transform: translate3d(0,100px,0);
+	transition: opacity 1s, transform 1s !important;
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+
+/* ========== Navbar Styling ========== */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: var(--nav-color);
+  transition: .30s ease; /* For dark mode animation */
+  position: fixed;
+  top: 0;
+  padding: 1.25rem;
+  z-index: 1;
+}
+
+.navbar .logo {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.navbar .logo img {
+  max-height: 24px;
+}
+
+.navbar .logo a {
+  font-family: 'Rubik', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  -webkit-transition: .4s ease;
+  transition: color .4s ease;
+  color: var(--text-color);
+}
+
+.navbar .logo a:hover {
+  color: var(--accent-color);
+}
+
+.navbar .logo .fa-circle {
+  font-size: 4px;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.navbar .nav-menu .nav-item {
+  width: fit-content;
+}
+
+.nav-menu .nav-item .nav-link {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 0.9375rem;
+  width: fit-content;
+  -webkit-transition: color .4s ease;
+	transition: color .4s ease;
+}
+
+.nav-menu .nav-item .nav-link.active,
+.nav-menu .nav-item .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.btn-nav {
+	display: inline-block;
+	height: 30px;
+	padding: 0 22px;
+  margin-left: 0.9375rem;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 28px;
+	letter-spacing: .05rem;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	white-space: nowrap;
+	cursor: pointer;
+	background: transparent;
+	color: var(--text-color);
+	border: 2px solid var(--text-color) !important;
+	border-radius: 5px;
+	box-sizing: border-box;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	transition: .4s;
+}
+
+.btn-nav:hover {
+	color: var(--body-color);
+	background: var(--accent-color);
+  border: 2px solid var(--accent-color) !important;
+}
+
+.btn-nav:focus, .btn-nav:active {
+	background: var(--accent-color);
+	color: var(--body-color);
+  border: 2px solid var(--accent-color) !important;
+}
+
+.btn-nav.active {
+	background: var(--accent-color);
+	color: var(--body-color);
+  border: 2px solid var(--accent-color) !important;
+}
+
+.hamburger {
+  display: none;
+}
+
+.wrapper-menu {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+	transform: rotate(-45deg);
+}
+
+.line-menu {
+	background-color: var(--text-color);
+	border-radius: 5px;
+	width: 100%;
+	height: 4px;
+}
+
+.line-menu.active {
+	background-color: var(--text-color);
+}
+
+.line-menu.half {
+	width: 50%;
+}
+
+.line-menu.start {
+	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+	transform-origin: right;
+}
+
+.open .line-menu.start {
+	transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+	align-self: flex-end;
+	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+	transform-origin: left;
+}
+
+.open .line-menu.end {
+	transform: rotate(-90deg) translateX(-3px);
+}
+
+/* --- Light & Dark Mode Button --- */
+.change-theme {
+	font-size: 23px !important;
+  background: none !important;
+  transition: .4s ease;
+	cursor: pointer;
+  margin-left: 0.9375rem;
+  margin-right: 0rem;
+}
+
+
+/* ========== FOOTER ========== */
+.footer {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 2rem;
+  }
+  
+.footer p {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+  
+.footer .footer-links a {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01rem;
+  margin-top: 0;
+  margin-right: 0.9375rem;
+  width: fit-content;
+  -webkit-transition: color .4s ease;
+	transition: color .4s ease;
+}
+
+.footer .footer-links a:hover {
+  color: var(--accent-color);
+}  
+  
+.footer .footer-right {
+  float: right;
+  margin-top: 0;
+  max-width: 104px;
+}
+  
+.footer .footer-right a {
+  display: inline-block;
+  font-size: 24px;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0 .25rem;
+  transition: all .25s;
+}
+
+.footer .footer-right a:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+  transform: scale(1.15);
+}
+
+.footer .footer-right #WithLove {
+  text-align: left;
+  font-size: 14px;
+  margin: 0 .20rem;
+}
+
+.footer .footer-right .fa-heart {
+  /* color: #dc2626; */
+  color: var(--accent-color);
+}
+
+
+/* ========== Responsive Media Queries ========== */
+@media only screen and (max-width: 768px) {
+  .nav-wrapper {
+    padding: 0 5px;
+  }
+  .nav-menu {
+    position: fixed;
+    justify-content: space-evenly !important;
+    text-align: center;
+    z-index: -1;
+    top: -50%;
+    right: 0rem;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    text-align: right;
+    transition: .4s ease;
+    box-shadow: 0 10px 20px -20px rgb(50 65 141 / 10%);
+    background-color: var(--nav-color);
+  }
+
+  .nav-menu .nav-item .nav-link {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .nav-menu.active {
+    top: 4rem;
+  }
+
+  .nav-menu li {
+    text-align: center;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .btn-nav {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .change-theme {
+    font-size: 22px !important;
+    transition: .4s ease;
+    cursor: pointer;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .footer {
+		padding: 1.25rem 0;
+	}
+	.footer .footer-left, .footer .footer-right {
+	  text-align: center;
+	}
+	.footer .footer-right {
+	  float: none;
+	  margin: 0 auto 20px;
+	}
+	.footer .footer-left p.footer-links {
+	  line-height: 1.8;
+	}
+  .footer .footer-right #WithLove {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
