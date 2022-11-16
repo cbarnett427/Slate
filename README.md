@@ -1,5 +1,5 @@
 <div align="center">
-<h1>SLATE Website Template</h1>
+<h1>Slate Template</h1>
 <i>A clean slate, a one-page website template with responsive mobile navigation.</i>
 <br>
 <br>
