@@ -3,7 +3,7 @@
 <i>A clean slate, a one-page website template with responsive mobile navigation.</i>
 <br>
 <br>
-<a href="https://cbarnett427.github.io/slate/"><b>Live Demo</b></a>
+<a href="https://cbarnett427.github.io/Slate/"><b>Live Demo</b></a>
 
 <h2 align="center">
   <img src="https://github.com/cbarnett427/slate/blob/main/img/PixelTrueMockup-Light.png" alt="Light Mode Mockup"/>
