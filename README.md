@@ -10,7 +10,7 @@
   <img src="https://github.com/cbarnett427/slate/blob/main/img/PixelTrueMockup-Dark.png" alt="Dark Mode Mockup"/>
   <br>
   <br>
-  <sub><sup>© 2022 Slate - Licensed under the <a href="./LICENSE">MIT License</a>.</sup></sub>
+  <sub><sup>© 2023 Slate - Licensed under the <a href="./LICENSE">MIT License</a>.</sup></sub>
 </h2>
 </div>
 
@@ -19,3 +19,8 @@
 :star: Responsive Design\
 :star: Light & Dark Modes\
 :star: Vanilla HTML, CSS & JS
+
+## Dependencies :tada:
+:star: PHPMailer\
+:star: Remix Icons\
+:star: Font Awesome Icons
