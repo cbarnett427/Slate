@@ -78,26 +78,27 @@
       </div>
    </section>
    <section class="bg-gray" id="contact">
-      <div class="container">
-         <div class="reveal">
+      <div class="main_container">
+         <div class="contact_form_container reveal">
             <form action="./php/sendEmail.php" method="post" name="contactform">
-               <h3>Contact <i class="fa-solid fa-mobile"></i></h3><br>
+               <h3>Contact <i class="fa-solid fa-mobile"></i></h3>
+               <p id="Contactsubtext">Got a question? I'd love to hear from you. Send me a message and I'll respond as soon as possible.<br></p>
   
-               <p><label for="first">Full Name</label><br>
-               <input maxlength="50" name="name" id="first" size="30" type="text" required placeholder="Name"/></p>
+               <p><label class="required" for="first">Full Name</label><br>
+               <input maxlength="50" name="name" id="first" size="30" type="text" required placeholder="Your name"/></p>
                  
                  
-               <p><label for="emailadr">Email Address</label><br>
-               <input maxlength="80" name="email" id="emailadr" size="30" type="email"required  placeholder="Email"/></p>
+               <p><label class="required" for="emailadr">Email</label><br>
+               <input maxlength="80" name="email" id="emailadr" size="30" type="email"required  placeholder="Your email"/></p>
 
-               <p><label for="subject">Subject</label><br>
-                  <input maxlength="50" name="subject" id="subject" size="30" type="text" required placeholder="Subject"/></p>
+               <p><label class="required" for="subject">Subject</label><br>
+                  <input maxlength="50" name="subject" id="subject" size="30" type="text" placeholder="Your subject"/></p>
                  
                
-               <p><label for="msg">Message </label><br>
-               <textarea cols="25" maxlength="1000" id="msg" name="message" rows="6" required placeholder="Message" ></textarea></p>
+               <p><label class="required" for="msg">Message</label><br>
+               <textarea cols="25" maxlength="1000" id="msg" name="message" rows="6" required placeholder="Write your message" ></textarea></p>
                <br>
-               <p><input type="submit" value="Send Message" /></p>
+               <p><input type="submit" value="Submit" /></p>
                 
                </form>
 
@@ -114,7 +115,7 @@
                <a href="#services">Services</a>
                <a href="#portfolio">Portfolio</a>
             </p>
-            <p>Copyright © 2022 SLATE. All Rights Reserved.</p>
+            <p>Copyright © 2023 SLATE. All Rights Reserved.</p>
 			</div>
          
          <div class="footer_column footer-right">
