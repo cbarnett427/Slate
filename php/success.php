@@ -35,10 +35,11 @@ body{
 .wrapper-2{
     padding: 100px;
     text-align:center;
-    box-shadow: 4px 8px 80px 8px rgba(93,120,255, .35);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: .25rem;
 }
 h1{
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Rubik', sans-serif;
     font-size: 6em;
     letter-spacing: 3px;
     color: #5d78ff;
@@ -98,9 +99,9 @@ h1{
 <div class=content>
   <div class="wrapper-1">
     <div class="wrapper-2">
-      <h1>Thank you !</h1>
+      <h1>Thank you!</h1>
       <p>Your submission has been received,  </p>
-      <p>and I will contact you soon.  </p>
+      <p>and I'll respond as soon as possible.  </p>
       <a href="../index.html">Go Home</a>
     </div>
 </div>
