@@ -1,6 +1,5 @@
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Figtree:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,600,700,800,900|Figtree:400,500,600,700,800,900');
 
 /* --- Variables --- */
 :root {
@@ -20,25 +19,21 @@
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-/* --- Main Styling ---*/
+/* --- Main Styling --- */
 body {
   font-family: 'Figtree', 'Montserrat', Calibri, sans-serif;
   line-height: 1.4;
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .30s ease; /* For dark mode animation */
+  transition: 0.3s ease; /* For dark mode animation */
 }
 
-/* --- Common Styles ---*/
-h1, h2, h3, h4, h5, h6 {
+/* --- Common Styles --- */
+h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
-}
-
-p {
-	font-size: 16px;
   margin: 10px 0;
 }
 
@@ -64,69 +59,79 @@ section {
   padding: 1.25rem;
 }
 
-form {
-  max-width: 550px;
-  padding: 1rem;
-  margin: 0 auto;
+.main_container {
+  max-width: 100rem;
+  margin: auto;
+}
+
+.contact_form_container {
   background: var(--body-color);
-  border-radius: .25rem;
+  padding: 4rem;
+  max-width: 50rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  margin: 5rem auto 0 auto;
 }
 
 input, textarea {
   width: 100%;
-  padding: .5rem;
+  padding: 1rem;
+  font-size: 0.9rem;
   background: var(--alt-body-color);
   border: 1px solid var(--alt-body-color);
-  border-radius: .25rem;
-  font-family: 'Figtree', 'Montserrat', Calibri, sans-serif;;
+  border-radius: 0.25rem;
+  font-family: 'Figtree', 'Montserrat', Calibri, sans-serif;
+  color: var(--text-color);
 }
 
 input[type=submit] {
   display: inline-block;
-	padding: .25rem;
-	text-align: center;
-	font-size: 13px;
-	font-weight: 700;
-	line-height: 28px;
-	letter-spacing: .05rem;
-	text-transform: uppercase;
-	text-decoration: none !important;
-	white-space: nowrap;
-	cursor: pointer;
-	background: transparent;
-	color: var(--text-color);
-	border: 2px solid var(--text-color) !important;
-	border-radius: 5px;
-	box-sizing: border-box;
-	-webkit-transition: .4s;
-	-moz-transition: .4s;
-	transition: .4s;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  white-space: nowrap;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color) !important;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.4s;
 }
 
-input[type=submit]:hover {
-	color: var(--body-color);
-	background: var(--accent-color);
-  border: 2px solid var(--accent-color) !important;
-}
-
-input[type=submit]:focus, input[type=submit]:active {
-	background: var(--accent-color);
-	color: var(--body-color);
-  border: 2px solid var(--accent-color) !important;
-}
-
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active,
 input[type=submit].active {
-	background: var(--accent-color);
-	color: var(--body-color);
+  color: var(--body-color);
+  background: var(--accent-color);
   border: 2px solid var(--accent-color) !important;
 }
 
 label, small {
-  font-size: small;
+  font-size: 0.9rem;
+  font-weight: 700;
   float: left;
+  padding: 1rem 0 0.25rem 0;
 }
 
-/* --- Dark Theme Variables ---*/
+#Contactsubtext {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1.5rem;
+}
+
+.required:after {
+  content: ' *';
+  display: inline;
+}
+
+/* --- Dark Theme Variables --- */
 body.dark-theme {
   --accent-color: #5d78ff;
   --text-color: #e3e3e3;
@@ -135,7 +140,6 @@ body.dark-theme {
   --body-color: #212121;
   --alt-body-color: #303030;
 }
-
 
 /* ========== Utilities ========== */
 .container {
@@ -188,9 +192,6 @@ body.dark-theme {
 }
 
 .navbar .logo {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0px;
   vertical-align: middle;
 }
 
@@ -229,7 +230,7 @@ body.dark-theme {
 .nav-menu .nav-item .nav-link {
   color: var(--text-color);
   font-weight: 700;
-  font-size: 15px;
+  /* font-size: 15px; */
   letter-spacing: 0.01rem;
   vertical-align: middle;
   display: inline-block;
@@ -251,7 +252,7 @@ body.dark-theme {
 	padding: 0 22px;
   margin-left: 0.9375rem;
 	text-align: center;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 700;
 	line-height: 28px;
 	letter-spacing: .05rem;
@@ -341,12 +342,10 @@ body.dark-theme {
 
 /* --- Light & Dark Mode Button --- */
 .change-theme {
-	font-size: 23px !important;
+  font-size: 24px !important;
   background: none !important;
-  transition: .4s ease;
-	cursor: pointer;
-  margin-left: 0.9375rem;
-  margin-right: 0rem;
+  transition: 0.4s ease;
+  cursor: pointer;
 }
 
 
@@ -434,9 +433,11 @@ body.dark-theme {
   color: var(--accent-color);
 }
 
-
 /* ========== Responsive Media Queries ========== */
-@media only screen and (max-width: 768px) {
+/* Smartphones (Portrait and Landscape)*/
+/* Portrait */
+@media screen and (max-width: 767px) {
+  /* Your CSS rules for smartphones in portrait mode */
   .nav-wrapper {
     padding: 0 5px;
   }
@@ -503,6 +504,21 @@ body.dark-theme {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+
   .footer {
 		padding: 1.25rem 0;
 	}
@@ -541,5 +557,173 @@ body.dark-theme {
 
   .footer .footer-center #WithLove {
     margin-bottom: 0;
+  }
+}
+/* Landscape */
+@media screen and (min-width: 568px) and (max-width: 767px) {
+  /* Your CSS rules for smartphones in landscape mode */
+  .nav-menu {
+    position: fixed;
+    justify-content: space-between !important;
+    text-align: center;
+    z-index: -1;
+    top: -50%;
+    right: 0rem;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    text-align: right;
+    transition: .4s ease;
+    box-shadow: 0 10px 20px -20px rgb(50 65 141 / 10%);
+    background-color: var(--nav-color);
+  }
+  #contact {
+    height: auto;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
+  }
+}
+
+
+/* Tablets (Portrait and Landscape) */
+/* Portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Your CSS rules for tablets in portrait mode */
+  #contact {
+    height: 100vh;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
+  }
+}
+/* Landscape */
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  /* Your CSS rules for tablets in landscape mode */
+  #contact {
+    height: auto;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
+  }
+}
+
+
+/* Small Laptops and Desktops (Portrait and Landscape) */
+/* Portrait */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  /* Your CSS rules for small laptops and desktops in portrait mode */
+  #contact {
+    height: 100vh;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
+  }
+}
+/* Landscape */
+@media screen and (min-width: 1024px) and (max-width: 1365px) and (orientation: landscape) {
+  /* Your CSS rules for small laptops and desktops in landscape mode */
+  #contact {
+    height: auto;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
+  }
+}
+
+
+/* Large Desktops (Portrait and Landscape) */
+/* Portrait and Landscape */
+@media screen and (min-width: 1366px) {
+  /* Your CSS rules for large desktops, works for both portrait and landscape */
+  #contact {
+    height: 100vh;
+    padding: 3rem;
+  }
+  #Contactsubtext {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .contact_form_container {
+    background: var(--body-color);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0 auto;
+  }
+  input, textarea {
+    padding: .75rem;
   }
 }
