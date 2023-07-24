@@ -120,6 +120,11 @@ label, small {
   padding: 1rem 0 0.25rem 0;
 }
 
+#contact {
+   height: auto;
+   padding: 1.25rem;
+}
+
 #Contactsubtext {
   font-size: 0.9rem;
   font-weight: 600;
